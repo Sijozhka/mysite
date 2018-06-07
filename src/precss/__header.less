@@ -1,0 +1,150 @@
+header {
+	margin: 0 -15px 50px -15px;
+	padding: 15px;
+	height: 100vh;
+
+	background: url('/assets/img/bg.jpg');
+	
+	.navbar {
+		background: rgba(0,0,0,0.5);
+		border-radius: 10px;
+		display:flex;
+		align-content: center;
+		align-items: center;
+		padding: 0 20px;
+		margin-bottom: 50px;
+		.socials {
+			font-size:20px;
+			display:flex;
+			justify-content: space-around;
+
+
+			&__icons {
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				margin-right: 20px;
+
+				background: #fff;
+				border-radius: 50%;
+				&:hover {
+					background: blue;
+				}
+			}
+		}
+		.topnav {
+			flex:1;
+			display:flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			text-transform: uppercase;
+			&__item {
+				margin: 0 20px;
+
+			}
+			&__link {
+				position:relative;
+				text-decoration: none;
+				color:#fff;
+				&:before, &:after {
+					content:'';
+					display: block;
+					position:absolute;
+					top: 0;
+					
+				  width: 0%;
+				  height: 1px;
+				  background-color: #fff;
+				  
+          transition: all 0.2s;
+
+				}
+				&:hover::before {
+				  	transform: translateY(-5px) scale(1);
+				  	width: 100%;
+
+				 }
+				 &:hover::after {
+				 		transform: translateY(25px) scale(1);
+				 		width: 100%;
+				 }
+
+
+				&:before {
+				 	left: 0;
+				 	transform: translateY(-5px) scale(0);
+
+				}
+				&:after {
+				 	right: 0;
+				 	transform: translateY(25px) scale(0);
+
+				}
+
+			}
+			.logo {
+				img {
+					margin: 0;
+					padding: 0;
+					max-width:100%;
+					
+				}
+				
+			}
+		}
+		.search {
+				position:relative;
+			&__input {
+				display: block;
+				box-sizing: border-box;
+				border:1px solid #aaa;
+				background: #888;
+				box-shadow: 0 0 5px  #f5f74f;
+				width: 200px;
+				height: 30px;
+				border-radius: 5px;
+
+			
+			
+				outline:none;
+				color:#555;
+				padding: 5px;
+				padding-left: 30px;
+				&:active, &:focus {
+					outline:none;
+					background: #fff;
+
+				}
+				&::placeholder {
+
+					color:#000;
+				}
+			}
+			&__btn {
+				
+					position: absolute;
+					left: 5px;
+					top: 5px;
+					background: url('/assets/img/icons8.png');
+					background-position: center;
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+				
+			}
+		}
+	}
+	.gallery {
+		width: 1280px;
+		height: 768px;
+		margin: 0 auto;
+		ul.slick-dots {
+			button:before {
+				font-size:30px;
+
+			}
+		}
+	}
+}
