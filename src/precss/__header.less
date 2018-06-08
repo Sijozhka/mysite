@@ -17,6 +17,7 @@ header {
 			font-size:20px;
 			display:flex;
 			justify-content: space-around;
+			width: 200px;
 
 
 			&__icons {
@@ -25,11 +26,14 @@ header {
 				text-align: center;
 				line-height: 30px;
 				margin-right: 20px;
+				font-size:18px;
+				color: blue;
 
 				background: #fff;
 				border-radius: 50%;
 				&:hover {
-					background: blue;
+					background: red;
+					color:#fff;
 				}
 			}
 		}
@@ -48,6 +52,9 @@ header {
 				position:relative;
 				text-decoration: none;
 				color:#fff;
+				&:hover {
+					color:yellow;
+				}
 				&:before, &:after {
 					content:'';
 					display: block;
@@ -56,7 +63,7 @@ header {
 					
 				  width: 0%;
 				  height: 1px;
-				  background-color: #fff;
+				  background-color: yellow;
 				  
           transition: all 0.2s;
 
@@ -147,4 +154,15 @@ header {
 			}
 		}
 	}
+}
+
+header.header_about {
+	margin: 0 -15px 50px -15px;
+	padding: 15px;
+	height: auto;
+	background: none;
+	.navbar {
+		margin-bottom: 0;
+	}
+
 }

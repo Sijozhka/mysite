@@ -5,7 +5,7 @@ module.exports = function(){
 		$.gulp.watch('./src/precss/*.less', $.gulp.series('less'));
 		$.gulp.watch('./src/css/*.css', $.gulp.series('css'));
 		$.gulp.watch('./src/js/*.js', $.gulp.series('js'));
-		$.gulp.watch('./src/index.html',$.gulp.series('html'));
+		$.gulp.watch('./src/*.html',$.gulp.series('html'));
 	});
 };	
 		
